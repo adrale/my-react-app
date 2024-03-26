@@ -10,19 +10,17 @@ function PokemonCard() {
       },
     ];
 
-    const pokemon = pokemonList.map((pokemon, index) => (
-      pokemon.imgSrc ? 
-      <figure key={index}> 
-        <img src={pokemon.imgSrc} alt={pokemon.name}/>
-        <figcaption>{pokemon.name}</figcaption>
-      </figure> 
-      : 
-      <figure key={index}>
-        <p>{pokemon.imgSrc = '???'}</p>
+    const pokemon = pokemonList[0]
+    return (
+      <figure>
+        {pokemon.imgSrc ? (
+          <img src={pokemon.imgSrc} alt={pokemon.name} />
+        ) : (
+          <p>???</p>
+        )
+        }
         <figcaption>{pokemon.name}</figcaption>
       </figure>
-    ));
-
-    return pokemon;
+    )
 }
 export default PokemonCard;
