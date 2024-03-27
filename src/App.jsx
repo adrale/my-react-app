@@ -28,11 +28,13 @@ function App() {
         name: "mew",
       },
     ];
-    
+
   const [pokemonIndex, setPokemonIndex] = useState(0)
+
   const handleClickNext = () => {
     setPokemonIndex(pokemonIndex +1)
   }
+  
   const handleClickPrev = () => {
     setPokemonIndex(pokemonIndex -1)
   }
