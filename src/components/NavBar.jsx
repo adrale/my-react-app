@@ -1,6 +1,9 @@
-function NavBar({pokemonList, setPokemonIndex }) {
-    const handleClick = (index) => {
+function NavBar({pokemonList, setPokemonIndex}) {
+    const handleClick = (index, pokemon) => {
       setPokemonIndex(index)
+      if(pokemon.name === "pikachu") {
+        alert("pika pikachu !!!")
+      }
     }
 
     return(
@@ -9,7 +12,7 @@ function NavBar({pokemonList, setPokemonIndex }) {
           <button 
           type="Button"
           key={pokemon.name}
-          onClick={() => {handleClick (index)}}
+          onClick={() => {handleClick (index, pokemon)}}
           >
             {pokemon.name}
           </button>
