@@ -32,9 +32,12 @@ function App() {
 
   const [pokemonIndex, setPokemonIndex] = useState(0)
 
-  useEffect(() => {
-    alert("Hello pokemon trainer :)")
-  })
+  useEffect(
+    () =>  {
+      alert("Hello pokemon trainer :)")
+    }, 
+    []
+ );
   
   return (
     <>
